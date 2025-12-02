@@ -201,7 +201,10 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: 0.3s ease;
       height: 100%;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      max-height: 430px;
     }
 
     .faculty-card:hover {
@@ -211,7 +214,7 @@
 
     .faculty-img-wrapper {
       width: 100%;
-      height: 250px;
+      height: 180px;
       overflow: hidden;
       background: linear-gradient(135deg, #39a164, #0A1A66);
       display: flex;
@@ -220,13 +223,19 @@
     }
 
     .faculty-img-wrapper i {
-      font-size: 80px;
+      font-size: 70px;
       color: #ffffff;
     }
 
     .faculty-info {
       padding: 20px;
       text-align: left;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .faculty-info::-webkit-scrollbar {
+      display: none;
     }
 
     .faculty-info h4 {
@@ -601,10 +610,10 @@
       <div class="faculty-subject-group mb-5">
         <h3 class="subject-title mb-4">Physics</h3>
         <div class="row g-4">
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
-                <i class="fas fa-chalkboard-user"></i>
+                <i class="fas fa-atom"></i>
               </div>
               <div class="faculty-info">
                 <h4>AKBAR KAMAL</h4>
@@ -617,10 +626,10 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
-                <i class="fas fa-chalkboard-user"></i>
+                <i class="fas fa-magnet"></i>
               </div>
               <div class="faculty-info">
                 <h4>Nikhil Yadav</h4>
@@ -639,10 +648,10 @@
       <div class="faculty-subject-group mb-5">
         <h3 class="subject-title mb-4">Chemistry</h3>
         <div class="row g-4">
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
-                <i class="fas fa-flask-vial"></i>
+                <i class="fas fa-flask"></i>
               </div>
               <div class="faculty-info">
                 <h4>AGRIM SINGHAL</h4>
@@ -657,21 +666,22 @@
         </div>
       </div>
 
-      <!-- Biology Faculty -->
+      <!-- Mathematics Faculty -->
       <div class="faculty-subject-group mb-5">
-        <h3 class="subject-title mb-4">Biology</h3>
+        <h3 class="subject-title mb-4">Mathematics</h3>
         <div class="row g-4">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
-                <i class="fas fa-leaf"></i>
+                <i class="fas fa-calculator"></i>
               </div>
               <div class="faculty-info">
-                <h4>Apurv Kumar</h4>
-                <div class="subject">Botany Expert</div>
-                <p><strong>Experience:</strong> 5+ Years</p>
-                <p><strong>Qualification:</strong> M.Sc. IIT-BHU, CSIR NET Qualified</p>
-                <p><strong>Achievements:</strong> Mentor of AIR 894 NEET</p>
+                <h4>Syed Fahad</h4>
+                <div class="subject">Mathematics Expert</div>
+                <p><strong>Experience:</strong> 15+ Years</p>
+                <p><strong>Qualification:</strong> B.Tech, IIT</p>
+                <p><strong>Background:</strong> Ex. Faculty Narayana, Sri Chaitanya</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 45, 89, 156 in JEE Advanced | AIR 234 in JEE Mains</p>
               </div>
             </div>
           </div>
@@ -679,31 +689,15 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
-                <i class="fas fa-microscope"></i>
+                <i class="fas fa-square-root-alt"></i>
               </div>
               <div class="faculty-info">
-                <h4>Vikas Yadav</h4>
-                <div class="subject">Zoology Expert</div>
-                <p><strong>Experience:</strong> 5+ Years</p>
-                <p><strong>Qualification:</strong> M.Sc. Zoology (Delhi University)</p>
-                <p><strong>Background:</strong> Ex. Faculty Aakash</p>
-                <p><strong>Achievements:</strong> Mentor of AIR 155, 172, 183, 247</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="faculty-card">
-              <div class="faculty-img-wrapper">
-                <i class="fas fa-leaf"></i>
-              </div>
-              <div class="faculty-info">
-                <h4>Danish Ahmad</h4>
-                <div class="subject">Botany Expert</div>
-                <p><strong>Experience:</strong> 8 Years</p>
-                <p><strong>Qualification:</strong> M.Sc. Botany</p>
-                <p><strong>Background:</strong> Ex. Faculty Aakash & Allen</p>
-                <p><strong>Achievements:</strong> Mentor of AIR 155, 172, 183, 247</p>
+                <h4>Shahrukh Ansari</h4>
+                <div class="subject">Mathematics Expert</div>
+                <p><strong>Experience:</strong> 8+ Years</p>
+                <p><strong>Qualification:</strong> M.Sc. Mathematics, NIT Jaipur</p>
+                <p><strong>Background:</strong> Ex. Faculty Aakash Institute</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 267, 456, 789 in JEE Advanced</p>
               </div>
             </div>
           </div>

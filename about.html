@@ -141,111 +141,138 @@
     }
 
     /* ================= FACULTY SECTION ================= */
-    .faculty-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 50%, #f0f4f0 100%);
-    }
+    /* FACULTY SECTION */
+.faculty-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 50%, #f0f4f0 100%);
+}
 
-    .faculty-intro {
-      text-align: center;
-      margin-bottom: 60px;
-    }
+/* INTRO */
+.faculty-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-    .faculty-intro h2 {
-      font-weight: 700;
-      font-size: 42px;
-      color: black;
-      margin-bottom: 15px;
-    }
+.faculty-intro h2 {
+  font-weight: 700;
+  font-size: 42px;
+  color: black;
+  margin-bottom: 15px;
+}
 
-    .faculty-intro p {
-      font-size: 18px;
-      color: #555;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+.faculty-intro p {
+  font-size: 18px;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    .subject-title {
-      font-weight: 700;
-      font-size: 28px;
-      color: #39a164;
-      position: relative;
-      padding-bottom: 15px;
-    }
+/* SUBJECT TITLES */
+.subject-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #39a164;
+  position: relative;
+  padding-bottom: 15px;
+}
 
-    .subject-title::after {
-      content: "";
-      width: 50px;
-      height: 3px;
-      background: #39a164;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      border-radius: 3px;
-    }
+.subject-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #39a164;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 3px;
+}
 
-    .faculty-subject-group {
-      margin-bottom: 50px;
-    }
+/* FACULTY GROUP */
+.faculty-subject-group {
+  margin-bottom: 50px;
+}
 
-    .faculty-card {
-      background: #ffffff;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: 0.3s ease;
-      height: 100%;
-      text-align: center;
-    }
+/* ================================
+   FIXED SHAPE CARD (THE IMPORTANT PART)
+   ================================ */
+.faculty-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  
+  /* To make all cards equal */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
-    .faculty-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(57, 161, 100, 0.2);
-    }
+  /* NEW → Keeps all cards same height */
+  min-height: 430px;  
+  max-height: 430px;
+}
 
-    .faculty-img-wrapper {
-      width: 100%;
-      height: 250px;
-      overflow: hidden;
-      background: linear-gradient(135deg, #39a164, #0A1A66);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.faculty-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(57, 161, 100, 0.2);
+}
 
-    .faculty-img-wrapper i {
-      font-size: 80px;
-      color: #ffffff;
-    }
+/* FIXED IMAGE WRAPPER */
+.faculty-img-wrapper {
+  width: 100%;
+  height: 180px; /* ← Reduced & fixed height */
+  overflow: hidden;
+  background: linear-gradient(135deg, #39a164, #0A1A66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .faculty-info {
-      padding: 20px;
-      text-align: left;
-    }
+.faculty-img-wrapper i {
+  font-size: 70px;
+  color: #ffffff;
+}
 
-    .faculty-info h4 {
-      font-weight: 700;
-      font-size: 20px;
-      color: black;
-      margin-bottom: 5px;
-      text-align: center;
-    }
+/* TEXT AREA FIXED HEIGHT */
+.faculty-info {
+  padding: 20px;
+  text-align: left;
 
-    .faculty-info .subject {
-      font-size: 14px;
-      color: #39a164;
-      font-weight: 600;
-      margin-bottom: 10px;
-      text-align: center;
-      display: block;
-    }
+  /* NEW → Scroll internally if text is too long */
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
 
-    .faculty-info p {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 8px;
-    }
+/* Hide scrollbar for Chrome, Safari and Edge */
+.faculty-info::-webkit-scrollbar {
+  display: none;
+}
+
+/* HEADINGS */
+.faculty-info h4 {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.faculty-info .subject {
+  font-size: 14px;
+  color: #39a164;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+}
+
+/* TEXT */
+.faculty-info p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
 
     /* ================= STATS ================= */
     .stats-section {
@@ -296,7 +323,6 @@
         color: #39a164;
     }
     
-
     /* ================= Responsive ================= */
     @media (max-width: 768px) {
       .about-hero h1 {
@@ -547,7 +573,7 @@
       <div class="faculty-subject-group mb-5">
         <h3 class="subject-title mb-4">Physics</h3>
         <div class="row g-4">
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
                 <i class="fas fa-chalkboard-user"></i>
@@ -563,7 +589,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
                 <i class="fas fa-chalkboard-user"></i>
@@ -585,7 +611,7 @@
       <div class="faculty-subject-group mb-5">
         <h3 class="subject-title mb-4">Chemistry</h3>
         <div class="row g-4">
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
                 <i class="fas fa-flask-vial"></i>

@@ -249,7 +249,10 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: 0.3s ease;
       height: 100%;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      max-height: 430px;
     }
 
     .faculty-card:hover {
@@ -259,7 +262,7 @@
 
     .faculty-img-wrapper {
       width: 100%;
-      height: 250px;
+      height: 180px;
       overflow: hidden;
       background: linear-gradient(135deg, #39a164, #0A1A66);
       display: flex;
@@ -268,13 +271,19 @@
     }
 
     .faculty-img-wrapper i {
-      font-size: 80px;
+      font-size: 70px;
       color: #ffffff;
     }
 
     .faculty-info {
       padding: 20px;
       text-align: left;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .faculty-info::-webkit-scrollbar {
+      display: none;
     }
 
     .faculty-info h4 {
@@ -584,7 +593,7 @@
       <div class="faculty-subject-group mb-5">
         <h3 class="subject-title mb-4">Physics</h3>
         <div class="row g-4">
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
                 <i class="fas fa-chalkboard-user"></i>
@@ -600,7 +609,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
                 <i class="fas fa-chalkboard-user"></i>
@@ -622,7 +631,7 @@
       <div class="faculty-subject-group mb-5">
         <h3 class="subject-title mb-4">Chemistry</h3>
         <div class="row g-4">
-          <div class="col-lg-6 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="faculty-card">
               <div class="faculty-img-wrapper">
                 <i class="fas fa-flask-vial"></i>
