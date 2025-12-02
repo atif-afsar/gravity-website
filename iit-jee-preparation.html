@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravity Classes - IIT-JEE Preparation in Aligarh</title>
+  <meta name="description"
+    content="Join Gravity Classes in Aligarh for expert IIT-JEE preparation. Comprehensive coaching for Physics, Chemistry, and Mathematics to achieve your engineering dreams.">
+  <meta name="keywords"
+    content="IIT-JEE preparation Aligarh, Gravity Classes IIT-JEE coaching, IIT-JEE syllabus, engineering entrance coaching, IIT-JEE training Aligarh">
+  <meta name="author" content="Gravity Classes">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Gravity Classes - IIT-JEE Preparation in Aligarh">
+  <meta property="og:description"
+    content="Excel in IIT-JEE with Gravity Classes' expert coaching in Aligarh. Tailored training, mock tests, and personalized mentoring for engineering aspirants.">
+  <meta property="og:image" content="assets/images/logo/gravity-classes-logo.png">
+  <meta property="og:url" content="https://www.gravityclassesaligarh.com/iit-jee-preparation.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gravity Classes - IIT-JEE Preparation in Aligarh">
+  <meta name="twitter:description"
+    content="Excel in IIT-JEE with Gravity Classes' expert coaching in Aligarh. Tailored training, mock tests, and personalized mentoring for engineering aspirants.">
+  <meta name="twitter:image" content="assets/images/logo/gravity-classes-logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-gravity.avif" sizes="32x32">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .iitjee-hero {
+      position: relative;
+      background: url('assets/images/iitjee-hero.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .iitjee-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .iitjee-hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .iitjee-hero-image {
+      position: sticky;
+      top: 100px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 3;
+    }
+
+    .iitjee-parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: 768px) {
+      .iitjee-hero {
+        height: 300px;
+      }
+
+      .iitjee-hero-image {
+        position: relative;
+        top: -40px;
+      }
+    }
+
+    .iitjee-about-section {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+    }
+
+    .iitjee-about-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .iitjee-about-image {
+      flex: 1;
+      min-width: 300px;
+      max-width: 400px;
+    }
+
+    .iitjee-about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+
+    .iitjee-about-text {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .iitjee-about-text h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .iitjee-about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #34495e;
+    }
+
+    .iitjee-about-text .btn {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .iitjee-about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .iitjee-about-image {
+        max-width: 100%;
+      }
+    }
+
+
+    /* FACULTY SECTION  */
+
+    .faculty-spotlight {
+      background: linear-gradient(135deg, #f0f8f0 0%, #d4edda 100%);
+      padding: 80px 0;
+      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .faculty-spotlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(46,125,50,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(46,125,50,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      pointer-events: none;
+    }
+
+    .faculty-spotlight h2 {
+      color: #3d3a3d;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .faculty-spotlight p {
+      font-size: 1.2rem;
+      color: #556b2f;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faculty-carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .faculty-slide {
+      display: none;
+      padding: 40px;
+      background: white;
+      text-align: center;
+      min-height: 400px;
+      animation: slideIn 0.5s ease;
+    }
+
+    .faculty-slide.active {
+      display: block;
+    }
+
+    .faculty-profile {
+      position: relative;
+    }
+
+    .icon-wrapper {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #4caf50, #81c784);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .icon-wrapper i {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .faculty-profile:hover .icon-wrapper {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .faculty-profile h3 {
+      color: #2e7d32;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .role {
+      color: #4caf50;
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      font-size: 1.3rem;
+      color: #388e3c;
+      font-style: italic;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(232, 245, 233, 0.5);
+      border-left: 4px solid #4caf50;
+      border-radius: 5px;
+    }
+
+    .bio {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .achievements {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .achievements li {
+      color: #666;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .achievements li::before {
+      content: '✓';
+      color: #4caf50;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .carousel-nav {
+      margin-top: 30px;
+    }
+
+    .nav-btn {
+      background: #4caf50;
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: #388e3c;
+    }
+
+    .dots {
+      display: inline-flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .dot.active {
+      background: #4caf50;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .faculty-slide {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .faculty-slide.active {
+      opacity: 1;
+      transform: translateY(0);
+      animation-delay: 0.2s;
+    }
+
+    /* Stagger Effect for Slides */
+    .faculty-slide:nth-child(1).active {
+      animation-delay: 0s;
+    }
+
+    .faculty-slide:nth-child(2).active {
+      animation-delay: 0.1s;
+    }
+
+    .faculty-slide:nth-child(3).active {
+      animation-delay: 0.2s;
+    }
+
+    .faculty-slide:nth-child(4).active {
+      animation-delay: 0.3s;
+    }
+
+    @media(max-width: 768px) {
+      .iitjee-hero::before {
+        top: -78px;
+      }
+    }
+
+    @media(max-width: 426px) {
+        .iitjee-hero-image {
+          width: 424px;
+          height: 121px;
+          position: relative;
+          top: -89.75px;
+      }
+
+      .iitjee-hero::before {
+          top: -180px;
+      }
+
+      .iitjee-about-section {
+          position: relative;
+          top: -120px;
+      }
+
+    }
+
+    @media(max-width: 376px) {
+      .iitjee-hero-image {
+        width: 100%;
+        height: 100%;
+        top: -97px;
+      }
+
+      .iitjee-hero::before{
+         top: -195px;
+      }
+    }
+
+    @media(max-width: 321px) {
+      .iitjee-hero-image {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          top: -104.75px;
+      }
+
+      .iitjee-hero::before {
+          top: -209px;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .faculty-spotlight h2 {
+        font-size: 2.2rem;
+      }
+
+      .faculty-slide {
+        padding: 30px 20px;
+        min-height: 350px;
+      }
+
+      .quote {
+        font-size: 1.1rem;
+      }
+
+      .nav-btn {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    /* Hover Reveal for Extra Interest */
+    .faculty-profile {
+      transition: all 0.4s ease;
+    }
+
+    .faculty-profile:hover {
+      box-shadow: 0 8px 25px rgba(46, 125, 50, 0.2);
+      transform: scale(1.02);
+    }
+
+    .faculty-profile:hover .bio {
+      color: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-header bg-yac">
+    <div class="container d-flex justifyburgo0 justify-content-between align-items-center">
+      <div class="contact-info">
+        <a href="mailto:info@gravityclassesaligarh.com" class="text-danger"><i class="fas fa-envelope text-dark"></i>
+          info@gravityclassesaligarh.com</a>
+        <a href="tel:+917078652702" class="text-danger"><i class="fas fa-phone-alt text-dark"></i>+91-8573986324. </a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/expert.tax.consultant?igsh=MTE3N2Z3OGN2Y2F1bQ==" target="_blank"
+          aria-label="Instagram"><i class="fab fa-instagram text-dark mx-2"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61578009397881" target="_blank" aria-label="Facebook"><i
+            class="fab fa-facebook-f text-dark mx-2"></i></a>
+        <a href="https://www.linkedin.com/company/experts-tax-consultants/" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in text-dark mx-2"></i></a>
+        <a href="https://www.youtube.com/@unigmaschoolofmathematics3988/shorts" target="_blank" aria-label="YouTube"><i
+            class="fab fa-youtube text-dark mx-2"></i></a>
+      </div>
+      <div class="action-links">
+        <a href="#" class="btn btn-link text-purple">Privacy</a>
+        <a href="#" class="btn btn-link text-purple">Terms</a>
+        <a href="tel:+917078652702" class="btn btn-link text-purple">Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-placeholder"></div>
+  <section class="wapp-section">
+    <a href="https://wa.me/8573986324." target PageRange all="_blank" aria-label="Chat on WhatsApp">
+      <img src="assets/images/logo/whatsappLogo.png" alt="WhatsApp Chat for Gravity Classes.in" class="w-img">
+    </a>
+  </section>
+
+
+  <header class="header" data-header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="/" class="logo d-flex align-items-center" aria-label="Go to homepage">
+        <img src="assets/images/logo/Gravity-logo.png" width="155" alt="gravity Logo" class="img-fluid" />
+      </a>
+
+      </a>
+      <nav class="navbar navbar-expand-lg sidebar-nav" data-navbar>
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <button class="navbar-close btn btn-outline-secondary d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarContent" aria-label="Close navigation">
+              <span>×</span>
+            </button>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a href="index.html" class="nav-link text-yac" data-nav-link><strong>Home</strong></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a href="index.html#about" class="nav-link text-yac" data-nav-link><strong>About</strong></a>
+              </li>
+              <!-- <li class="nav-item">
+                                <a href="#about" class="nav-link mx-2 text-yac"
+                                    data-nav-link><strong>About</strong></a>
+                            </li> -->
+              <li class="nav-item dropdown-hover">
+                <a class="nav-link dropdown-toggle mx-2 text-yac" href="#" id="productsDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>Preparation</strong>
+                </a>
+                <ul class="dropdown-menu-custom" aria-labelledby="productsDropdown">
+                  <li><a class="dropdown-item text-yac" href="iit-jee-preparation.html">IIT-JEE</a></li>
+                  <li><a class="dropdown-item text-yac" href="neet-preparation.html">NEET</a></li>
+                  <li><a class="dropdown-item text-yac" href="foundation-preparation.html">Foundation</a></li>
+                  <li><a class="dropdown-item text-yac" href="entrance-preparation.html">XI Entrance</a></li>
+
+                  <!-- <li><a class="dropdown-item text-yac" href="#products">BALLB</a></li>  
+                                  <li><a class="dropdown-item text-yac" href="#products">B.Ed</a></li> -->
+                </ul>
+              </li>
+
+
+              <li class="nav-item mx-2">
+                <a href="result.html" class="nav-link text-yac" data-nav-link><strong>Results</strong></a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link mx-2 text-yac" data-nav-link><strong>Contact</strong></a>
+              </li>
+              <li class="nav-item">
+                <a href="blog.html" class="nav-link mx-2 text-yac" data-nav-link><strong>Blog</strong></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <a href="contact.html" class="btn bg-success ms-3 d-none d-lg-inline-block">Enroll Now</a>
+    </div>
+  </header>
+  <section class="iitjee-hero iitjee-parallax">
+    <div class="iitjee-hero-content">
+      <img src="assets/images/preparation-banner/iit-banner.jpg" alt="IIT-JEE Topper" class="iitjee-hero-image">
+    </div>
+  </section>
+
+  <section class="iitjee-about-section">
+    <div class="container iitjee-about-container">
+      <div class="iitjee-about-image">
+        <img src="assets/images/preparation-banner/iit-post.jpg" alt="IIT-JEE Coaching at Gravity Classes in Aligarh">
+      </div>
+      <div class="iitjee-about-text">
+        <h1>IIT-JEE Preparation at Gravity Classes</h1>
+        <p>At <strong>Gravity Classes</strong> in Aligarh, we are committed to guiding aspiring engineers to excel in
+          the Joint Entrance Examination (JEE Main & Advanced). With over 8 years of experience, our expert faculty
+          delivers comprehensive coaching tailored to the IIT-JEE syllabus, covering Physics, Chemistry, and
+          Mathematics. Our proven teaching methodologies, regular mock tests, and personalized mentoring have led to
+          over 5,000 selections in IIT-JEE examinations. Join our state-of-the-art facilities in Aligarh for interactive
+          classes and a focused approach to secure your admission to prestigious engineering institutes.</p>
+        <a href="#" class="btn bg-success text-white">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Faculty Section -->
+
+
+  <section class="faculty-spotlight" id="jee-faculty-spotlight">
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Gravity Classes Aligarh",
+        "employee": [
+            {
+                "@type": "Person",
+                "name": "Syed Fahad",
+                "jobTitle": "Maths Faculty and Operational Head",
+                "worksFor": {
+                    "@type": "EducationalOrganization",
+                    "name": "Gravity Classes Aligarh"
+                },
+                "alumniOf": "IIT",
+                "knowsAbout": "JEE Advanced Mathematics Aligarh"
+            },
+            {
+                "@type": "Person",
+                "name": "Shahrukh Ansari",
+                "jobTitle": "Physics Faculty",
+                "worksFor": {
+                    "@type": "EducationalOrganization",
+                    "name": "Gravity Classes Aligarh"
+                },
+                "alumniOf": "IIT",
+                "knowsAbout": "JEE Main Physics Coaching Aligarh"
+            }
+            // Add more for other faculty
+        ]
+    }
+    </script>
+
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-10 text-center">
+          <h2>Spotlight on Our IIT JEE Expert Faculty in Aligarh</h2>
+          <p>Meet the passionate IIT alumni and specialists shaping future engineers at Gravity Classes, with proven
+            track records in JEE Main & Advanced preparation through innovative teaching and personalized doubt
+            resolution for Aligarh students.</p>
+        </div>
+      </div>
+
+      <!-- Carousel Wrapper -->
+      <div class="faculty-carousel">
+        <!-- Slide 1: Syed Fahad - Maths -->
+        <div class="faculty-slide">
+          <div class="faculty-profile">
+            <div class="icon-wrapper">
+              <i class="fas fa-calculator" aria-hidden="true"></i>
+            </div>
+            <h3>Syed Fahad</h3>
+            <p class="role">Maths Faculty & Operational Head</p>
+            <div class="quote">"Unlocking complex equations with real-world JEE scenarios – join my sessions for top
+              ranks!"</div>
+            <p class="bio">IIT alumnus with 10+ years training 500+ students for JEE Advanced Mathematics in Aligarh,
+              focusing on Calculus and Algebra through interactive problem-solving and weekly
+              analytics.</p>
+            <ul class="achievements">
+              <li>AIR 80 Producer in JEE Advanced</li>
+              <li>Authored 3 JEE Math Books</li>
+              <li>95% Success Rate in Aligarh Batches</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 2: Shahrukh Ansari - Physics -->
+        <div class="faculty-slide">
+          <div class="faculty-profile">
+            <div class="icon-wrapper">
+              <i class="fas fa-atom" aria-hidden="true"></i>
+            </div>
+            <h3>Shahrukh Ansari</h3>
+            <p class="role">Physics Faculty Expert</p>
+            <div class="quote">"Physics isn't formulas – it's the universe explained; master JEE with conceptual depth."
+            </div>
+            <p class="bio">Seasoned Physics teacher at Gravity Classes Aligarh, specializing in Mechanics and
+              Electrodynamics for JEE Main, with hands-on experiments and mock tests that have propelled students to IIT
+              admissions.</p>
+            <ul class="achievements">
+              <li>8+ Years JEE Physics Coaching</li>
+              <li>Trained 300+ Aligarh Students</li>
+              <li>Integrated NEET/JEE Curriculum</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 3: Gaurav Dubey - Team Leader -->
+        <div class="faculty-slide">
+          <div class="faculty-profile">
+            <div class="icon-wrapper">
+              <i class="fas fa-flask" aria-hidden="true"></i>
+            </div>
+            <h3>Gaurav Dubey</h3>
+            <p class="role">Chemistry Team Leader</p>
+            <div class="quote">"From reactions to ranks: Simplify Organic Chemistry for unbeatable JEE performance."
+            </div>
+            <p class="bio">Leads Chemistry modules for JEE preparation in Aligarh at Gravity Classes, emphasizing
+              reaction mechanisms and PYQ analysis, helping droppers and Class 12 students secure top
+              percentiles.</p>
+            <ul class="achievements">
+              <li>Over 400 Students Mentored</li>
+              <li>Expert in IIT-Level Organic Chem</li>
+              <li>Personalized Doubt Sessions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 4: Er. Amir Sir - Mentor -->
+        <div class="faculty-slide">
+          <div class="faculty-profile">
+            <div class="icon-wrapper">
+              <i class="fas fa-users" aria-hidden="true"></i>
+            </div>
+            <h3>Er. Amir Sir</h3>
+            <p class="role">Senior JEE Mentor</p>
+            <div class="quote">"Holistic guidance: From foundation to IIT success with Gravity's innovative approach."
+            </div>
+            <p class="bio">Founder-level mentor at Gravity Classes Aligarh, IIT graduate driving integrated JEE programs
+              with smart tools and motivational strategies for Class 11-12 and foundation
+              courses.</p>
+            <ul class="achievements">
+              <li>Produced 1000+ JEE Selections</li>
+              <li>15+ Years Teaching Excellence</li>
+              <li>Aligarh's Top JEE Success Coach</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-nav text-center mt-4">
+        <button class="nav-btn prev" aria-label="Previous Faculty">←</button>
+        <span class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <button class="nav-btn next" aria-label="Next Faculty">→</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="parallax" id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-left slide-in-left">
+        <div class="company-info pt-4">
+          <div class="info-block mt-2 animate">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <div>
+              <h2>𝐎𝐮𝐫 𝐎𝐟𝐟𝐢𝐜𝐞 𝐀𝐝𝐝𝐫𝐞𝐬𝐬</h2>
+              <p>Above Bank of Baroda, Abdullah road,
+Aligarh, U.P.</p>
+            </div>
+          </div>
+          <div class="info-block mt-2 animate">
+            <i class="fas fa-envelope icon"></i>
+            <div>
+              <h2>𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐄𝐧𝐪𝐮𝐢𝐫𝐢𝐞𝐬</h2>
+              <p><a href="mailto:info@gravityclasses.in">𝐢𝐧𝐟𝐨@𝐠𝐫𝐚𝐯𝐢𝐭𝐲𝐜𝐥𝐚𝐬𝐬𝐞𝐬.𝐢𝐧</a></p>
+            </div>
+          </div>
+          <div class="info-block mt-2 animate">
+            <i class="fas fa-phone-alt icon"></i>
+            <div>
+              <h2>𝐂𝐚𝐥𝐥 𝐔𝐬</h2>
+              <p><a href="tel:+919625161549">+(91) 8573986324.</a></p>
+            </div>
+          </div>
+          <div class="info-block mt-2 animate">
+            <i class="fab fa-whatsapp icon"></i>
+            <div>
+              <h2>𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗨𝘀</h2>
+              <p><a href="https://wa.me/919625161549" target="_blank">+(91) 8573986324.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right slide-in-right">
+        <div class="contact-container">
+          <h1>Talk To Our Experts</h1>
+          <form action="#" method="POST">
+            <div class="form-group animate">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="text-dark mb-3" required>
+              <!-- <label for="name" class="mb-1">Name</label> -->
+            </div>
+            <div class="form-group animate ">
+              <input type="email" id="email" name="email" placeholder="Email" class="text-dark mb-3" required>
+              <!-- <label for="email">Email</label> -->
+            </div>
+            <div class="form-group animate">
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)" pattern="[0-9]{10,15}"
+                class="mb-3">
+              <!-- <label for="phone">Phone (Optional)</label> -->
+            </div>
+            <div class="form-group animate">
+              <select id="inquiry_type" name="inquiry_type" required>
+                <option value="" disabled selected>Select Inquiry Type</option>
+                <option value="General">General Inquiry</option>
+                <option value="Courses">Course Information</option>
+                <option value="Support">Support</option>
+              </select>
+              <!-- <label for="inquiry_type">Inquiry Type</label> -->
+            </div>
+            <div class="form-group mt-4 animate">
+              <textarea id="message" name="message" placeholder="Message" rows="3" class="text-dark"
+                required></textarea>
+              <!-- <label for="message">Message</label> -->
+            </div>
+            <button type="submit" class="btn btn-outline-success text-dark touch animate">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/images/logo/logo-gravity.avif" alt="smartChaser Logo">
+      </div>
+      <div class="footer-main ms-0 ms-lg-2">
+        <div class="footer-column">
+          <h3 class="about-heading">𝔸𝕓𝕠𝕦𝕥 𝔾𝕣𝕒𝕧𝕚𝕥𝕪 ℂ𝕝𝕒𝕤𝕤𝕖𝕤</h3>
+          <p><strong>𝘎𝘳𝘢𝘷𝘪𝘵𝘺 𝘊𝘭𝘢𝘴𝘴𝘦𝘴</strong> 𝘪𝘴 𝘢 𝘱𝘳𝘦𝘴𝘵𝘪𝘨𝘪𝘰𝘶𝘴 𝘪𝘯𝘴𝘵𝘪𝘵𝘶𝘵𝘦 𝘧𝘰𝘳
+            𝘵𝘩𝘦 𝘱𝘳𝘦𝘱𝘢𝘳𝘢𝘵𝘪𝘰𝘯 𝘰𝘧 𝘑𝘌𝘌 (𝘔𝘢𝘪𝘯), 𝘑𝘌𝘌 (𝘔𝘢𝘪𝘯 & 𝘈𝘥𝘷𝘢𝘯𝘤𝘦𝘥), 𝘔𝘦𝘥𝘪𝘤𝘢𝘭
+            (𝘕𝘌𝘌𝘛-𝘜𝘎), 𝘗𝘳𝘦-𝘕𝘶𝘳𝘵𝘶𝘳𝘦, 𝘢𝘯𝘥 𝘍𝘰𝘶𝘯𝘥𝘢𝘵𝘪𝘰𝘯 (𝘧𝘰𝘳 𝘊𝘭𝘢𝘴𝘴 𝘝𝘐𝘐𝘐 𝘵𝘰 𝘟,
+            𝘕𝘛𝘚𝘌, 𝘢𝘯𝘥 𝘖𝘭𝘺𝘮𝘱𝘪𝘢𝘥𝘴), 𝘸𝘪𝘵𝘩 𝘰𝘷𝘦𝘳 8 𝘺𝘦𝘢𝘳𝘴 𝘰𝘧 𝘦𝘹𝘱𝘦𝘳𝘪𝘦𝘯𝘤𝘦. 𝘛𝘰
+            𝘥𝘢𝘵𝘦, 𝘸𝘦 𝘩𝘢𝘷𝘦 𝘢𝘤𝘩𝘪𝘦𝘷𝘦𝘥 𝘰𝘷𝘦𝘳 5,000+ 𝘴𝘦𝘭𝘦𝘤𝘵𝘪𝘰𝘯𝘴 𝘪𝘯 𝘐𝘐𝘛-𝘑𝘌𝘌 𝘢𝘯𝘥
+            𝘰𝘷𝘦𝘳 4,500 𝘪𝘯 𝘮𝘦𝘥𝘪𝘤𝘢𝘭 𝘦𝘯𝘵𝘳𝘢𝘯𝘤𝘦 𝘦𝘹𝘢𝘮𝘪𝘯𝘢𝘵𝘪𝘰𝘯𝘴.</p>
+        </div>
+        <div class="footer-column ms-0 ps-0 ms-lg-5">
+          <h3>ℙ𝕣𝕠𝕕𝕦𝕔𝕥𝕤</h3>
+          <ul class="d-flex flex-column justify-content-start">
+            <li><a href="#">𝘐𝘐𝘛-𝘑𝘌𝘌</a></li>
+            <li><a href="#">𝘕𝘌𝘌𝘛</a></li>
+            <li><a href="#">𝘍𝘰𝘶𝘯𝘥𝘢𝘵𝘪𝘰𝘯</a></li>
+            <li><a href="#">𝘟𝘐 𝘌𝘯𝘵𝘳𝘢𝘯𝘤𝘦</a></li>
+          </ul>
+        </div>
+        <div class="footer-column ms-0 ms-lg-4">
+          <h3>𝕆𝕥𝕙𝕖𝕣 𝕃𝕚𝕟𝕜𝕤</h3>
+          <ul>
+            <li><a href="#">𝘗𝘳𝘪𝘷𝘢𝘤𝘺</a></li>
+            <li><a href="index.html#about">𝘈𝘣𝘰𝘶𝘵</a></li>
+            <li><a href="index.html#map-section">𝘚𝘪𝘵𝘦𝘮𝘢𝘱</a></li>
+            <li><a href="contact.html">𝘊𝘰𝘯𝘵𝘢𝘤𝘵</a></li>
+          </ul>
+        </div>
+        <div class="footer-column ms-0 ms-lg-3">
+          <h3>ℂ𝕠𝕟𝕥𝕒𝕔𝕥</h3>
+          <ul>
+            <li><a
+                href="mailto:info@gravityclassesaligarh.com">𝘪𝘯𝘧𝘰@𝘨𝘳𝘢𝘷𝘪𝘵𝘺𝘤𝘭𝘢𝘴𝘴𝘦𝘴𝘢𝘭𝘪𝘨𝘢𝘳𝘩.com</a>
+            </li>
+            <li><a href="tel:+917078652702"><i class="fas fa-phone pe-2"></i>+91 8573986324</a></li>
+            <li><a href="https://wa.me/7078652702">𝘓𝘪𝘷𝘦 𝘊𝘩𝘢𝘵</a></li>
+            <li><a href="#">𝘍𝘈𝘘</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>𝕊𝕠𝕔𝕚𝕒𝕝 𝕃𝕚𝕟𝕜𝕤</h3>
+          <ul>
+            <div class="footer-social">
+              <li><a href="https://www.facebook.com/profile.php?id=61578009397881"><i
+                    class="fab fa-facebook-f footer-social-links"></i></a></li>
+              <li><a href="https://www.youtube.com/@unigmaschoolofmathematics3988/shorts"><i
+                    class="fab fa-youtube footer-social-links"></i></a></li>
+              <li><a href="https://www.instagram.com/expert.tax.consultant?igsh=MTE3N2Z3OGN2Y2F1bQ=="><i
+                    class="fab fa-instagram footer-social-links"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/experts-tax-consultants/"><i
+                    class="fab fa-linkedin-in footer-social-links"></i></a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-navy">
+      <a href="">
+        <h3 class="text-white">© 𝟮𝟬𝟮𝟱 𝗚𝗿𝗮𝘃𝗶𝘁𝘆𝗖𝗹𝗮𝘀𝘴𝗲𝘴𝗔𝗹𝗶𝗴𝗮𝗿𝗵. 𝘈𝘭𝘭 𝘙𝘪𝘨𝘩𝘵𝘴
+          𝘙𝘦𝘴𝘦𝘳𝘷𝘦𝘥.</h3>
+      </a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+    integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4kdeJe3y5B3Gwe5B8z8k1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('.faculty-slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.nav-btn.prev');
+      const nextBtn = document.querySelector('.nav-btn.next');
+      const carousel = document.querySelector('.faculty-carousel');
+
+      let currentSlide = 0;
+      let autoSlideInterval;
+      const slideInterval = 5000; // Auto-slide every 5 seconds
+
+      function updateSlide(index) {
+        // Remove active class from all slides and dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current slide and dot
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        let nextIndex = (currentSlide + 1) % slides.length;
+        updateSlide(nextIndex);
+      }
+
+      function prevSlide() {
+        let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide(prevIndex);
+      }
+
+      // Auto-slide function
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, slideInterval);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      // Navigation button events
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          stopAutoSlide();
+          nextSlide();
+          startAutoSlide(); // Restart auto-slide after manual action
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          stopAutoSlide();
+          prevSlide();
+          startAutoSlide(); // Restart auto-slide after manual action
+        });
+      }
+
+      // Dot navigation
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', function () {
+          stopAutoSlide();
+          updateSlide(index);
+          startAutoSlide(); // Restart auto-slide after manual action
+        });
+      });
+
+      // Pause on hover
+      if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+      }
+
+      // Initialize first slide
+      updateSlide(0);
+
+      // Start auto-slide
+      startAutoSlide();
+    });
+  </script>
+
+
+</body>
+
+</html>
