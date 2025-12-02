@@ -195,143 +195,112 @@
 
     /* FACULTY SECTION  */
 
-    .faculty-spotlight {
-      background: linear-gradient(135deg, #f0f8f0 0%, #d4edda 100%);
+     .faculty-section {
       padding: 80px 0;
-      color: #2c3e50;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 50%, #f0f4f0 100%);
     }
 
-    .faculty-spotlight::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(46,125,50,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(46,125,50,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-      pointer-events: none;
-    }
-
-    .faculty-spotlight h2 {
-      color: #3d3a3d;
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      animation: fadeInUp 1s ease;
-    }
-
-    .faculty-spotlight p {
-      font-size: 1.2rem;
-      color: #556b2f;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faculty-carousel {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .faculty-slide {
-      display: none;
-      padding: 40px;
-      background: white;
+    .faculty-intro {
       text-align: center;
-      min-height: 400px;
-      animation: slideIn 0.5s ease;
+      margin-bottom: 60px;
     }
 
-    .faculty-slide.active {
-      display: block;
+    .faculty-intro h2 {
+      font-weight: 700;
+      font-size: 42px;
+      color: black;
+      margin-bottom: 15px;
     }
 
-    .faculty-profile {
+    .faculty-intro p {
+      font-size: 18px;
+      color: #555;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .subject-title {
+      font-weight: 700;
+      font-size: 28px;
+      color: #39a164;
       position: relative;
+      padding-bottom: 15px;
     }
 
-    .icon-wrapper {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #4caf50, #81c784);
-      border-radius: 50%;
-      margin: 0 auto 20px;
+    .subject-title::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: #39a164;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-radius: 3px;
+    }
+
+    .faculty-subject-group {
+      margin-bottom: 50px;
+    }
+
+    .faculty-card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+      height: 100%;
+      text-align: center;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(57, 161, 100, 0.2);
+    }
+
+    .faculty-img-wrapper {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #39a164, #0A1A66);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
-      transition: transform 0.3s ease;
     }
 
-    .icon-wrapper i {
-      font-size: 2rem;
-      color: white;
+    .faculty-img-wrapper i {
+      font-size: 80px;
+      color: #ffffff;
     }
 
-    .faculty-profile:hover .icon-wrapper {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    .faculty-profile h3 {
-      color: #2e7d32;
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    .role {
-      color: #4caf50;
-      font-size: 1.1rem;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .quote {
-      font-size: 1.3rem;
-      color: #388e3c;
-      font-style: italic;
-      margin-bottom: 20px;
-      padding: 15px;
-      background: rgba(232, 245, 233, 0.5);
-      border-left: 4px solid #4caf50;
-      border-radius: 5px;
-    }
-
-    .bio {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .achievements {
-      list-style: none;
-      padding: 0;
+    .faculty-info {
+      padding: 20px;
       text-align: left;
     }
 
-    .achievements li {
-      color: #666;
-      margin-bottom: 8px;
-      padding-left: 20px;
-      position: relative;
+    .faculty-info h4 {
+      font-weight: 700;
+      font-size: 20px;
+      color: black;
+      margin-bottom: 5px;
+      text-align: center;
     }
 
-    .achievements li::before {
-      content: '✓';
-      color: #4caf50;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
+    .faculty-info .subject {
+      font-size: 14px;
+      color: #39a164;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+      display: block;
     }
+
+    .faculty-info p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
 
     .carousel-nav {
       margin-top: 30px;
@@ -504,7 +473,7 @@
                 <a href="index.html" class="nav-link text-yac" data-nav-link><strong>Home</strong></a>
               </li>
               <li class="nav-item mx-2">
-                <a href="index.html#about" class="nav-link text-yac" data-nav-link><strong>About</strong></a>
+                <a href="about.html" class="nav-link text-yac" data-nav-link><strong>About</strong></a>
               </li>
               <!-- <li class="nav-item">
                                 <a href="#about" class="nav-link mx-2 text-yac"
@@ -604,68 +573,128 @@
   }
   </script>
 
+    <section class="faculty-section">
     <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-10 text-center">
-          <h2>Expert Faculty for XI Entrance Preparation in Aligarh</h2>
-          <p>Focused coaching by IIT alumni in core subjects for success in Class XI entrance exams. Our expert faculty
-            ensures comprehensive understanding in Mathematics, Science and English with personalized mentoring for top
-            school admissions.</p>
-        </div>
+      <div class="faculty-intro">
+        <h2>Our Star Faculties</h2>
+        <p>UP's No.1 Brand is now in your city! With proven result, expert faculty and a strong legacy of excellence, Gravity Classes is here to shape your Future</p>
       </div>
 
-      <!-- Carousel Wrapper -->
-      <div class="faculty-carousel">
-        <!-- Slide 1: Mr. Ajay Kumar - Maths -->
-        <div class="faculty-slide">
-          <div class="faculty-profile">
-            <div class="icon-wrapper">
-              <i class="fas fa-calculator" aria-hidden="true"></i>
+      <!-- Physics Faculty -->
+      <div class="faculty-subject-group mb-5">
+        <h3 class="subject-title mb-4">Physics</h3>
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="faculty-card">
+              <div class="faculty-img-wrapper">
+                <i class="fas fa-chalkboard-user"></i>
+              </div>
+              <div class="faculty-info">
+                <h4>AKBAR KAMAL</h4>
+                <div class="subject">Physics Expert</div>
+                <p><strong>Experience:</strong> 20+ Years</p>
+                <p><strong>Qualification:</strong> B.Tech, AMU</p>
+                <p><strong>Background:</strong> Ex. Faculty Narayana, Sri Chaitanya, Aakash Institute</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 113, 335, 374 in JEE Advanced | AIR 30 in AIIMS</p>
+              </div>
             </div>
-            <h3>Mr. Ajay Kumar</h3>
-            <p class="role">Mathematics Faculty XI Entrance</p>
-            <div class="quote">"Master the fundamentals of math for a successful XI entrance exam."</div>
-            <p class="bio">IIT alumnus with 7 years of experience coaching students for competitive XI entrance exams in
-              Aligarh with emphasis on problem solving and theoretical rigor.</p>
-            <ul class="achievements">
-              <li>Trained 700+ XI entrance students</li>
-              <li>Expert in Algebra and Geometry</li>
-              <li>Consistent top rankholders in Aligarh</li>
-            </ul>
           </div>
-        </div>
 
-        <!-- Slide 2: Ms. Kiran Sharma - Science -->
-        <div class="faculty-slide">
-          <div class="faculty-profile">
-            <div class="icon-wrapper">
-              <i class="fas fa-flask" aria-hidden="true"></i>
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="faculty-card">
+              <div class="faculty-img-wrapper">
+                <i class="fas fa-chalkboard-user"></i>
+              </div>
+              <div class="faculty-info">
+                <h4>Nikhil Yadav</h4>
+                <div class="subject">Physics Expert</div>
+                <p><strong>Experience:</strong> 7+ Years</p>
+                <p><strong>Qualification:</strong> M.Tech NIT Kurukshetra, GATE Qualified</p>
+                <p><strong>Background:</strong> Ex. Faculty Aakash Institute, Narayana</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 356, 678, 956 in JEE Advanced | AIR 435, 548 in NEET</p>
+              </div>
             </div>
-            <h3>Ms. Kiran Sharma</h3>
-            <p class="role">Science Faculty (Physics & Chemistry)</p>
-            <div class="quote">"Simplifying Science concepts for solid foundation and exam confidence."</div>
-            <p class="bio">IIT graduate specializing in Physics and Chemistry with 8+ years of coaching XI entrance
-              aspirants for Aligarh schools, focusing on experiments, theory, and exam strategies.</p>
-            <ul class="achievements">
-              <li>Successfully coached 650+ students</li>
-              <li>Emphasizes conceptual clarity and application</li>
-              <li>High score achievers in school entrances</li>
-            </ul>
           </div>
         </div>
       </div>
 
-      <div class="carousel-nav text-center mt-4">
-        <button class="nav-btn prev" aria-label="Previous Faculty">←</button>
-        <span class="dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-        </span>
-        <button class="nav-btn next" aria-label="Next Faculty">→</button>
+      <!-- Chemistry Faculty -->
+      <div class="faculty-subject-group mb-5">
+        <h3 class="subject-title mb-4">Chemistry</h3>
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="faculty-card">
+              <div class="faculty-img-wrapper">
+                <i class="fas fa-flask-vial"></i>
+              </div>
+              <div class="faculty-info">
+                <h4>AGRIM SINGHAL</h4>
+                <div class="subject">Chemistry Expert</div>
+                <p><strong>Experience:</strong> 7+ Years</p>
+                <p><strong>Qualification:</strong> M.Sc. Chemistry (IIT Guwahati), GATE Qualified</p>
+                <p><strong>Background:</strong> Ex. Faculty Aakash</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 60, 75, 155, 168, 270 | International Rank 123 & 366 in Science Olympiad</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Biology Faculty -->
+      <div class="faculty-subject-group mb-5">
+        <h3 class="subject-title mb-4">Biology</h3>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="faculty-card">
+              <div class="faculty-img-wrapper">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="faculty-info">
+                <h4>Apurv Kumar</h4>
+                <div class="subject">Botany Expert</div>
+                <p><strong>Experience:</strong> 5+ Years</p>
+                <p><strong>Qualification:</strong> M.Sc. IIT-BHU, CSIR NET Qualified</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 894 NEET</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="faculty-card">
+              <div class="faculty-img-wrapper">
+                <i class="fas fa-microscope"></i>
+              </div>
+              <div class="faculty-info">
+                <h4>Vikas Yadav</h4>
+                <div class="subject">Zoology Expert</div>
+                <p><strong>Experience:</strong> 5+ Years</p>
+                <p><strong>Qualification:</strong> M.Sc. Zoology (Delhi University)</p>
+                <p><strong>Background:</strong> Ex. Faculty Aakash</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 155, 172, 183, 247</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="faculty-card">
+              <div class="faculty-img-wrapper">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="faculty-info">
+                <h4>Danish Ahmad</h4>
+                <div class="subject">Botany Expert</div>
+                <p><strong>Experience:</strong> 8 Years</p>
+                <p><strong>Qualification:</strong> M.Sc. Botany</p>
+                <p><strong>Background:</strong> Ex. Faculty Aakash & Allen</p>
+                <p><strong>Achievements:</strong> Mentor of AIR 155, 172, 183, 247</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
-
 
 
   <section class="parallax" id="contact">
@@ -757,7 +786,7 @@ Aligarh, UP.</p>
             𝘰𝘷𝘦𝘳 4,500 𝘪𝘯 𝘮𝘦𝘥𝘪𝘤𝘢𝘭 𝘦𝘯𝘵𝘳𝘢𝘯𝘤𝘦 𝘦𝘹𝘢𝘮𝘪𝘯𝘢𝘵𝘪𝘰𝘯𝘴.</p>
         </div>
         <div class="footer-column ms-0 ps-0 ms-lg-5">
-          <h3>ℙ𝕣𝕠𝕕𝕦𝕔𝕥𝕤</h3>
+          <h3>ℙ𝕣𝕖𝕡𝕒𝕣𝕒𝕥𝕚𝕠𝕟𝕤</h3>
           <ul class="d-flex flex-column justify-content-start">
             <li><a href="iit-jee-preparation.html">𝘐𝘐𝘛-𝘑𝘌𝘌</a></li>
             <li><a href="neet-preparation.html">𝘕𝘌𝘌𝘛</a></li>
