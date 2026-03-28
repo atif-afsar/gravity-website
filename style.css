@@ -567,7 +567,7 @@ h5.ms-5 {
 
 @media (max-width: 576px) {
     .wapp-section {
-        bottom: 4rem;
+        bottom: 6rem;
         right: 9rem;
         transform: scale(0.9);
     }
@@ -610,6 +610,84 @@ h5.ms-5 {
 
     100% {
         box-shadow: 0 0 20px rgba(37, 211, 102, 1);
+    }
+}
+
+/* ..................................call button (left corner) .....................................*/
+
+.call-section {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+}
+
+@media (max-width: 576px) {
+    .call-section {
+        bottom: 4rem;
+        left: auto;
+        right: auto;
+    }
+}
+
+.call-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #39a164, #198754);
+    border: 3px solid #39a164;
+    box-shadow: 0 0 15px rgba(57, 161, 100, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: callShine 2s infinite alternate;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .call-btn {
+        position: absolute;
+        left: 1rem;
+    }
+}
+
+.call-btn i {
+    font-size: 24px;
+    color: white;
+    animation: phoneRing 1.5s ease-in-out infinite;
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(57, 161, 100, 0.9);
+}
+
+@keyframes callShine {
+    0% {
+        box-shadow: 0 0 10px rgba(57, 161, 100, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(57, 161, 100, 1);
+    }
+}
+
+@keyframes phoneRing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(-15deg);
+    }
+    20%, 40% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
     }
 }
 
