@@ -567,9 +567,9 @@ h5.ms-5 {
 
 @media (max-width: 576px) {
     .wapp-section {
-        bottom: 6rem;
-        right: 9rem;
-        transform: scale(0.9);
+        bottom: 3rem;
+        right: 7rem;
+        transform: scale(0.75);
     }
 
     .custom-bg-container {
@@ -627,7 +627,7 @@ h5.ms-5 {
 
 @media (max-width: 576px) {
     .call-section {
-        bottom: 4rem;
+        bottom: 2rem;
         left: auto;
         right: auto;
     }
@@ -652,6 +652,12 @@ h5.ms-5 {
     .call-btn {
         position: absolute;
         left: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .call-btn i {
+        font-size: 18px;
     }
 }
 
@@ -3807,6 +3813,16 @@ body {
   .hero-text {
     font-size: 0.85rem;   /* smaller only on mobile */
     line-height: 1.5;
+  }
+  
+  /* Move badge up on mobile */
+  section .container .badge {
+    margin-top: -2rem;
+  }
+  
+  /* Move main hero heading up on mobile */
+  section .container .display-3 {
+    margin-top: -1rem;
   }
 }
 
