@@ -63,6 +63,47 @@ body {
     border-bottom: 1px solid #ddd;
     z-index: 1001;
     position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.top-header marquee {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.top-header marquee span {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .top-header {
+        display: block;
+        padding: 8px 0;
+    }
+    
+    .top-header marquee {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-header {
+        display: block;
+        padding: 6px 0;
+    }
+    
+    .top-header marquee {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
+    .top-header marquee span {
+        margin: 0 20px;
+        font-weight: 700;
+    }
 }
 
 .top-header .contact-info a {
@@ -567,7 +608,7 @@ h5.ms-5 {
 
 @media (max-width: 576px) {
     .wapp-section {
-        bottom: 3rem;
+        bottom: 4rem;
         right: 7rem;
         transform: scale(0.75);
     }
@@ -627,7 +668,7 @@ h5.ms-5 {
 
 @media (max-width: 576px) {
     .call-section {
-        bottom: 2rem;
+        bottom: 3rem;
         left: auto;
         right: auto;
     }
@@ -4056,5 +4097,686 @@ body {
   
   .topper-perf-card {
     padding: 25px 15px;
+  }
+}
+
+/* ===================================================== */
+/* 🏆 BEST PERFORMERS GRID SECTION - GRAVITY CLASSES */
+/* ===================================================== */
+.best-performers-grid-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 50%, #dcfce7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.best-performers-grid-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(57, 161, 100, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(57, 161, 100, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.best-performers-grid-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.best-performers-grid-section .section-header {
+  margin-bottom: 60px;
+}
+
+.best-performers-grid-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.best-performers-grid-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #39a164, #198754);
+  border-radius: 2px;
+}
+
+.best-performers-grid-section .section-subtitle {
+  font-size: 1.15rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Grid Layout */
+.performers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Performer Card */
+.performer-grid-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.performer-grid-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #39a164, #198754);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.performer-grid-card:hover::before {
+  transform: scaleX(1);
+}
+
+.performer-grid-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(57, 161, 100, 0.2);
+}
+
+.performer-card-inner {
+  padding: 0;
+}
+
+/* Image Wrapper */
+.performer-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.performer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.performer-grid-card:hover .performer-image {
+  transform: scale(1.08);
+}
+
+/* Badge */
+.performer-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #39a164, #198754);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(57, 161, 100, 0.4);
+}
+
+/* Details Section */
+.performer-details {
+  padding: 25px 20px;
+  text-align: center;
+  background: white;
+}
+
+.performer-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Score Display */
+.performer-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-radius: 12px;
+  border: 2px solid #39a164;
+}
+
+.score-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #39a164;
+  line-height: 1;
+}
+
+.performer-exam {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+
+/* View All Button */
+.btn-view-results {
+  display: inline-block;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #39a164, #198754);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(57, 161, 100, 0.3);
+}
+
+.btn-view-results:hover {
+  background: linear-gradient(135deg, #2d7a4d, #146c43);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(57, 161, 100, 0.4);
+  color: white;
+}
+
+.btn-view-results i {
+  transition: transform 0.3s ease;
+}
+
+.btn-view-results:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .best-performers-grid-section {
+    padding: 60px 0;
+  }
+
+  .best-performers-grid-section .section-title {
+    font-size: 2.2rem;
+  }
+
+  .performers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .performer-image-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .best-performers-grid-section {
+    padding: 50px 0;
+  }
+
+  .best-performers-grid-section .section-title {
+    font-size: 1.9rem;
+  }
+
+  .performers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .performer-image-wrapper {
+    height: 280px;
+  }
+
+  .performer-name {
+    font-size: 1.1rem;
+  }
+
+  .score-value {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .best-performers-grid-section {
+    padding: 40px 0;
+  }
+
+  .best-performers-grid-section .section-title {
+    font-size: 1.6rem;
+  }
+
+  .best-performers-grid-section .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .performers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .performer-image-wrapper {
+    height: 350px;
+  }
+
+  .performer-details {
+    padding: 20px 15px;
+  }
+
+  .btn-view-results {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Achievements List Styling for Special Cards */
+.performer-achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, #f0fdf4, #ffffff);
+  border-radius: 8px;
+  border-left: 3px solid #39a164;
+  transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  transform: translateX(5px);
+  border-left-color: #198754;
+}
+
+.achievement-item i {
+  color: #39a164;
+  font-size: 1rem;
+  margin-top: 2px;
+  min-width: 18px;
+}
+
+.achievement-item span {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.highlight-achievement {
+  background: linear-gradient(135deg, #dcfce7, #c8e6c9);
+  border-left: 4px solid #198754;
+  font-weight: 600;
+}
+
+.highlight-achievement i {
+  color: #198754;
+  font-size: 1.1rem;
+}
+
+.highlight-achievement span {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Adjust card height for achievement cards */
+.performer-grid-card:has(.performer-achievements-list) {
+  grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+  .achievement-item span {
+    font-size: 0.8rem;
+  }
+  
+  .performer-grid-card:has(.performer-achievements-list) {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .achievement-item {
+    padding: 8px;
+    gap: 10px;
+  }
+  
+  .achievement-item span {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===================================================== */
+/* 🌟 FEATURED LARGE PERFORMER CARD */
+/* ===================================================== */
+.featured-performer-card {
+  margin-top: 40px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(57, 161, 100, 0.15);
+  border: 3px solid #39a164;
+  transition: all 0.4s ease;
+}
+
+.featured-performer-card:hover {
+  box-shadow: 0 12px 40px rgba(57, 161, 100, 0.25);
+  transform: translateY(-5px);
+}
+
+.featured-card-inner {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 0;
+}
+
+/* Featured Image Section */
+.featured-image-section {
+  position: relative;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 500px;
+}
+
+.featured-performer-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #39a164, #198754);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(57, 161, 100, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featured-badge i {
+  font-size: 1.1rem;
+}
+
+/* Featured Details Section */
+.featured-details-section {
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff, #f0fdf4);
+}
+
+.featured-performer-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.featured-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Featured Achievements Grid */
+.featured-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.featured-achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #e8f5e9;
+  transition: all 0.3s ease;
+}
+
+.featured-achievement-item:hover {
+  border-color: #39a164;
+  background: linear-gradient(135deg, #f0fdf4, #ffffff);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(57, 161, 100, 0.1);
+}
+
+.achievement-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: linear-gradient(135deg, #39a164, #198754);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(57, 161, 100, 0.3);
+}
+
+.achievement-icon i {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.achievement-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.achievement-content p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Highlight Special Achievement */
+.highlight-featured {
+  border: 2px solid #39a164;
+  background: linear-gradient(135deg, #dcfce7, #c8e6c9);
+  grid-column: span 2;
+}
+
+.highlight-featured .achievement-icon {
+  background: linear-gradient(135deg, #198754, #146c43);
+}
+
+.highlight-featured .achievement-content h4 {
+  color: #198754;
+  font-size: 1.1rem;
+}
+
+.highlight-featured .achievement-content p {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive Design for Featured Card */
+@media (max-width: 991px) {
+  .featured-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image-section {
+    padding: 30px;
+    min-height: 300px;
+  }
+
+  .featured-details-section {
+    padding: 30px;
+  }
+
+  .featured-performer-title {
+    font-size: 1.7rem;
+  }
+
+  .featured-achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-featured {
+    grid-column: span 1;
+  }
+
+  .performers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-performer-card {
+    margin-top: 30px;
+  }
+
+  .featured-image-section {
+    padding: 25px;
+    min-height: 250px;
+  }
+
+  .featured-details-section {
+    padding: 25px;
+  }
+
+  .featured-performer-title {
+    font-size: 1.5rem;
+  }
+
+  .featured-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .featured-achievement-item {
+    padding: 15px;
+  }
+
+  .achievement-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  .achievement-icon i {
+    font-size: 1.1rem;
+  }
+
+  .performers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-performer-card {
+    border-radius: 16px;
+    border-width: 2px;
+  }
+
+  .featured-image-section {
+    padding: 20px;
+    min-height: 280px;
+  }
+
+  .featured-badge {
+    font-size: 0.75rem;
+    padding: 8px 15px;
+  }
+
+  .featured-details-section {
+    padding: 20px;
+  }
+
+  .featured-performer-title {
+    font-size: 1.3rem;
+  }
+
+  .featured-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .featured-achievement-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .achievement-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .achievement-icon i {
+    font-size: 1rem;
+  }
+
+  .achievement-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .achievement-content p {
+    font-size: 0.8rem;
+  }
+
+  .performers-grid {
+    grid-template-columns: 1fr;
   }
 }
