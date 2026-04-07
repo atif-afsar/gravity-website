@@ -4163,9 +4163,9 @@ body {
 /* Grid Layout */
 .performers-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* Performer Card */
@@ -4189,6 +4189,78 @@ body {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
+}
+
+.performer-grid-card.highlight-card {
+  border: 2px solid #ffc107;
+  box-shadow: 0 14px 35px rgba(255, 193, 7, 0.28);
+}
+
+.performer-grid-card.highlight-card::before {
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+}
+
+.performer-rank-label {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eaf6ff;
+  color: #0b5ed7;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.performer-highlight-note {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 1200px) {
+  .performers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .performers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.performer-highlight-card-wrapper {
+  max-width: 520px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.performer-highlight-heading {
+  margin-bottom: 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.special-card .performer-image-wrapper {
+  height: 340px;
+}
+
+.special-card .performer-details {
+  padding: 30px 24px;
+}
+
+.special-card .performer-name {
+  color: #b45309;
+}
+
+.special-card .performer-badge {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
 .performer-grid-card:hover::before {
@@ -4292,6 +4364,15 @@ body {
   font-size: 0.9rem;
   color: #888;
   font-weight: 500;
+}
+
+.performer-rollno {
+  font-size: 0.95rem;
+  color: #c62828;
+  font-weight: 700;
+  margin-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* View All Button */
