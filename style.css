@@ -77,6 +77,26 @@ body {
     font-weight: 700;
 }
 
+.top-header .marquee-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 4px 0;
+}
+
+.top-header .marquee {
+    padding: 0;
+    box-shadow: none;
+}
+
+.top-header .marquee span {
+    font-size: 14px;
+    margin: 0 16px;
+    color: #000;
+    text-shadow: none;
+    font-weight: 700;
+}
+
 @media (max-width: 768px) {
     .top-header {
         display: block;
@@ -427,6 +447,7 @@ h5.ms-5 {
   }
 
   .dropdown-menu-custom.show {
+    display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
     max-height: 500px !important;
@@ -1111,7 +1132,7 @@ h5.ms-5 {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: topperMarquee 30s linear infinite;
+  animation: topperMarquee 20s linear infinite;
 }
 
 .top-performers-track:hover {
@@ -1222,6 +1243,68 @@ h5.ms-5 {
 
 .marquee:hover {
     animation-play-state: paused;
+}
+
+/* ===================================================== */
+/* 🔥 TOP PERFORMERS SECTIONS - GRAVITY CLASSES */
+/* ===================================================== */
+.rankers-section {
+  margin-bottom: 60px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.rankers-section:last-child {
+  margin-bottom: 0;
+}
+
+.slide-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slide-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d5a2d;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slide-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Remove old carousel styles */
+.top-performers-carousel,
+.carousel-slide,
+.carousel-nav,
+.carousel-btn {
+  display: none !important;
+}
+
+/* Responsive Design for Rankers Sections */
+@media (max-width: 768px) {
+  .slide-title {
+    font-size: 2rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 1rem;
+  }
+  
+  .rankers-section {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-title {
+    font-size: 1.8rem;
+  }
 }
 
 /* Decorative elements */
@@ -4434,7 +4517,7 @@ body {
   }
 
   .performers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
     gap: 20px;
   }
 
@@ -4465,16 +4548,66 @@ body {
   }
 
   .performers-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
 
+  .performer-grid-card {
+    min-width: 0;
+  }
+
   .performer-image-wrapper {
-    height: 350px;
+    height: auto;
+    padding: 20px 0 10px;
+  }
+
+  .performer-image {
+    width: auto;
+    max-width: 90%;
+    max-height: 250px;
+  }
+
+  .performer-grid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .performer-card-inner {
+    width: 100%;
   }
 
   .performer-details {
     padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .performer-score {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 12px;
+  }
+
+  .performer-exam,
+  .performer-rollno,
+  .performer-name {
+    width: 100%;
+  }
+
+  .performer-details p,
+  .performer-score,
+  .performer-exam,
+  .performer-rollno {
+    text-align: center;
+  }
+
+  .performer-details {
+    padding: 20px 12px;
   }
 
   .btn-view-results {
@@ -4801,7 +4934,7 @@ body {
   }
 
   .performers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
   }
 }
 
@@ -4858,6 +4991,6 @@ body {
   }
 
   .performers-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

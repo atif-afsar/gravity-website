@@ -109,20 +109,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdownToggles = document.querySelectorAll('.sidebar-nav .dropdown-toggle, .sidebar-nav .nav-item.dropdown-hover > .nav-link');
         
         dropdownToggles.forEach(toggle => {
-            // Prevent default and stop propagation for dropdown toggles
             toggle.addEventListener('click', function(e) {
-                // Only handle if sidebar is open (mobile view)
-                if (window.innerWidth < 992) {
+                const href = this.getAttribute('href');
+                const isMobileView = window.innerWidth < 992;
+                const isSidebarOpen = navbarCollapse.classList.contains('show');
+                if (href === '#' || isMobileView || isSidebarOpen) {
                     e.preventDefault();
-                    e.stopPropagation();
-                    
+                    e.stopImmediatePropagation();
+                }
+
+                // Only handle if sidebar is open (mobile sidebar mode)
+                if (isSidebarOpen || isMobileView) {
                     // Find parent dropdown item
                     const parentDropdown = this.closest('.nav-item.dropdown-hover') || this.closest('.nav-item.dropdown');
                     if (!parentDropdown) return;
-                    
+
                     const dropdownMenu = parentDropdown.querySelector('.dropdown-menu-custom');
                     const isActive = parentDropdown.classList.contains('active');
-                    
+
                     // Close all other dropdowns first
                     document.querySelectorAll('.sidebar-nav .nav-item.dropdown-hover, .sidebar-nav .nav-item.dropdown').forEach(item => {
                         if (item !== parentDropdown) {
@@ -130,14 +134,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             const menu = item.querySelector('.dropdown-menu-custom');
                             if (menu) menu.classList.remove('show');
                         }
-                        // Remove active class from other toggles
                         const otherToggle = item.querySelector('.dropdown-toggle, .nav-link.dropdown-toggle');
                         if (otherToggle) {
                             otherToggle.classList.remove('active');
                             otherToggle.setAttribute('aria-expanded', 'false');
                         }
                     });
-                    
+
                     // Toggle current dropdown
                     if (!isActive) {
                         parentDropdown.classList.add('active');
@@ -150,14 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         this.classList.remove('active');
                         this.setAttribute('aria-expanded', 'false');
                     }
-                }
-            });
-            
-            // Prevent navigation for dropdown toggle links
-            toggle.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#' || (window.innerWidth < 992)) {
-                    e.preventDefault();
                 }
             });
         });
@@ -399,5 +394,11 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
    5. By using .closest() to find parent elements and controlling
       event flow, we ensure dropdown toggles work without triggering
       the navbar collapse behavior.
-===================================================== */
+   ===================================================== */
+
+// ===============================================
+// TOP PERFORMERS CAROUSEL FUNCTIONALITY - REMOVED
+// Now using smooth marquee for both IIT and NEET sections
+// ===============================================
+
 

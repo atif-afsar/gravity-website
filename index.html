@@ -61,7 +61,7 @@
 
 <body>
   <div class="top-header bg-yac">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
+    <div class="marquee-container" aria-label="Latest updates"><div class="marquee">
 
       <span class="mx-5">🎉 Gravity Classes Results : 150+ Selections in IIT-JEE</span>
 
@@ -73,14 +73,14 @@
 
       <span class="mx-5">🌟 New Batches for IIT-JEE &amp; NEET Starting Soon!</span>
 
-    </marquee>
+    </div></div>
   </div>
 
   <div class="navbar-placeholder"></div>
   
   <!-- WhatsApp Button (Right) -->
   <section class="wapp-section">
-    <a href="https://wa.me/918573986324" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918573986324" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
       <img src="assets/images/logo/whatsappLogo.png" alt="WhatsApp Chat for Gravity Classes.in" class="w-img">
     </a>
   </section>
@@ -97,10 +97,8 @@
 
   <header class="header" data-header>
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="#" class="logo d-flex align-items-center" aria-label="Go to homepage">
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="Go to homepage">
         <img src="assets/images/logo/Gravity-logo.png" width="155" alt="gravity Logo" class="img-fluid" />
-      </a>
-
       </a>
       <!-- Mobile Backdrop -->
       <div class="navbar-backdrop" data-navbar-backdrop></div>
@@ -133,7 +131,7 @@
                             </li> -->
               <li class="nav-item dropdown-hover">
                 <a class="nav-link dropdown-toggle mx-2 text-yac" href="#" id="productsDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
+                  aria-expanded="false">
                   <strong>Preparation</strong>
                 </a>
                 <ul class="dropdown-menu-custom" aria-labelledby="productsDropdown">
@@ -294,207 +292,194 @@
         <p class="section-subtitle">Meet the brilliant minds who achieved excellence with Gravity Classes</p>
       </div>
 
-      <div class="top-performers-marquee">
-        <div class="top-performers-track">
-          <!-- Card 1 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/10.jpg" alt="Zahid Khan" class="topper-perf-photo">
-              <h3 class="topper-perf-name">ADNAN RAZA</h3>
-              <span class="topper-perf-achievement">Percentile 99.67</span>
+      <!-- IIT/JEE Rankers Section -->
+      <div class="rankers-section">
+        <div class="slide-header">
+          <h3 class="slide-title">JEE Main Rankers</h3>
+          <p class="slide-subtitle">Our IIT-JEE achievers who secured top percentiles</p>
+        </div>
+        <div class="top-performers-marquee">
+          <div class="top-performers-track">
+            <!-- Card 1 -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/10.jpg" alt="Zahid Khan" class="topper-perf-photo">
+                <h3 class="topper-perf-name">ADNAN RAZA</h3>
+                <span class="topper-perf-achievement">Percentile 99.67</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/13.jpg" alt="Mohammad Azaan" class="topper-perf-photo">
+                <h3 class="topper-perf-name">RAVINDRA KUMAR</h3>
+                <span class="topper-perf-achievement">Percentile 99.4</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/12.jpg" alt="Arihant Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">ATHARVA UPADHYAY</h3>
+                <span class="topper-perf-achievement">Percentile 99.65</span>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/14.jpg" alt="Aditya Raj" class="topper-perf-photo">
+                <h3 class="topper-perf-name">MOHD ALI UMAR</h3>
+                <span class="topper-perf-achievement">Percentile 99.11</span>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/11.jpg" alt="Sakshi Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">Ojas Singhal</h3>
+                <span class="topper-perf-achievement">Percentile 99.973</span>
+              </div>
+            </div>
+
+            <!-- Duplicate cards for smooth marquee -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/10.jpg" alt="Zahid Khan" class="topper-perf-photo">
+                <h3 class="topper-perf-name">ADNAN RAZA</h3>
+                <span class="topper-perf-achievement">Percentile 99.67</span>
+              </div>
+            </div>
+
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/13.jpg" alt="Mohammad Azaan" class="topper-perf-photo">
+                <h3 class="topper-perf-name">RAVINDRA KUMAR</h3>
+                <span class="topper-perf-achievement">Percentile 99.4</span>
+              </div>
+            </div>
+
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/12.jpg" alt="Arihant Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">ATHARVA UPADHYAY</h3>
+                <span class="topper-perf-achievement">Percentile 99.65</span>
+              </div>
+            </div>
+
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/14.jpg" alt="Aditya Raj" class="topper-perf-photo">
+                <h3 class="topper-perf-name">MOHD ALI UMAR</h3>
+                <span class="topper-perf-achievement">Percentile 99.11</span>
+              </div>
+            </div>
+
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/11.jpg" alt="Sakshi Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">Ojas Singhal</h3>
+                <span class="topper-perf-achievement">Percentile 99.973</span>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Card 2 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/13.jpg" alt="Mohammad Azaan" class="topper-perf-photo">
-              <h3 class="topper-perf-name">RAVINDRA KUMAR</h3>
-              <span class="topper-perf-achievement">Percentile 99.4</span>
+      <!-- NEET Rankers Section -->
+      <div class="rankers-section">
+        <div class="slide-header">
+          <h3 class="slide-title">NEET Rankers</h3>
+          <p class="slide-subtitle">Our medical aspirants who achieved outstanding NEET scores</p>
+        </div>
+        <div class="top-performers-marquee">
+          <div class="top-performers-track">
+            <!-- Card 6 - NEET -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img src="assets/images/home-result/15.jpg" alt="Yusuf" class="topper-perf-photo">
+                <h3 class="topper-perf-name">YUSUF</h3>
+                <span class="topper-perf-achievement">NEET Score 625</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/12.jpg" alt="Arihant Singh" class="topper-perf-photo">
-              <h3 class="topper-perf-name">ATHARVA UPADHYAY</h3>
-              <span class="topper-perf-achievement">Percentile 99.65</span>
+            <!-- Card 7 - NEET -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img src="assets/images/home-result/16.jpg" alt="Vishal Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">VISHAL SINGH</h3>
+                <span class="topper-perf-achievement">NEET Score 590</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/14.jpg" alt="Aditya Raj" class="topper-perf-photo">
-              <h3 class="topper-perf-name">MOHD ALI UMAR</h3>
-              <span class="topper-perf-achievement">Percentile 99.11</span>
+            <!-- Card 8 - NEET -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img src="assets/images/home-result/17.jpg" alt="Panshul" class="topper-perf-photo">
+                <h3 class="topper-perf-name">PANSHUL</h3>
+                <span class="topper-perf-achievement">NEET Score 631</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 5 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/11.jpg" alt="Sakshi Singh" class="topper-perf-photo">
-              <h3 class="topper-perf-name">Ojas Singhal</h3>
-              <span class="topper-perf-achievement">Percentile 99.973</span>
+            <!-- Duplicate cards for smooth marquee -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/15.jpg" alt="Yusuf" class="topper-perf-photo">
+                <h3 class="topper-perf-name">YUSUF</h3>
+                <span class="topper-perf-achievement">NEET Score 625</span>
+              </div>
             </div>
-          </div>
 
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/10.jpg" alt="Zahid Khan" class="topper-perf-photo">
-              <h3 class="topper-perf-name">ADNAN RAZA</h3>
-              <span class="topper-perf-achievement">Percentile 99.67</span>
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/16.jpg" alt="Vishal Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">VISHAL SINGH</h3>
+                <span class="topper-perf-achievement">NEET Score 590</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 2 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/13.jpg" alt="Mohammad Azaan" class="topper-perf-photo">
-              <h3 class="topper-perf-name">RAVINDRA KUMAR</h3>
-              <span class="topper-perf-achievement">Percentile 99.4</span>
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/17.jpg" alt="Panshul" class="topper-perf-photo">
+                <h3 class="topper-perf-name">PANSHUL</h3>
+                <span class="topper-perf-achievement">NEET Score 631</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/12.jpg" alt="Arihant Singh" class="topper-perf-photo">
-              <h3 class="topper-perf-name">ATHARVA UPADHYAY</h3>
-              <span class="topper-perf-achievement">Percentile 99.65</span>
+            <!-- Additional duplicates for smoother marquee -->
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/15.jpg" alt="Yusuf" class="topper-perf-photo">
+                <h3 class="topper-perf-name">YUSUF</h3>
+                <span class="topper-perf-achievement">NEET Score 625</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/14.jpg" alt="Aditya Raj" class="topper-perf-photo">
-              <h3 class="topper-perf-name">MOHD ALI UMAR</h3>
-              <span class="topper-perf-achievement">Percentile 99.11</span>
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/16.jpg" alt="Vishal Singh" class="topper-perf-photo">
+                <h3 class="topper-perf-name">VISHAL SINGH</h3>
+                <span class="topper-perf-achievement">NEET Score 590</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Card 5 -->
-          <div class="topper-card-wrapper">
-            <div class="topper-perf-card">
-              <img src="assets/images/home-result/11.jpg" alt="Sakshi Singh" class="topper-perf-photo">
-              <h3 class="topper-perf-name">Ojas Singhal</h3>
-              <span class="topper-perf-achievement">Percentile 99.973</span>
+            <div class="topper-card-wrapper">
+              <div class="topper-perf-card">
+                <img loading="lazy" src="assets/images/home-result/17.jpg" alt="Panshul" class="topper-perf-photo">
+                <h3 class="topper-perf-name">PANSHUL</h3>
+                <span class="topper-perf-achievement">NEET Score 631</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
 
-  <!-- ===================================================== -->
-  <!-- 🏆 DISTRICT TOPPER SECTION - GRAVITY CLASSES -->
-  <!-- ===================================================== -->
-  <section class="best-performers-grid-section">
-    <div class="container">
-      <div class="section-header text-center mb-5">
-        <h2 class="section-title">District Toppers</h2>
-        <p class="section-subtitle">Celebrating our top district achievers and their outstanding results</p>
-      </div>
 
-      <div class="performers-grid">
-        <!-- Performer Card 1 -->
-        <div class="performer-grid-card">
-          <div class="performer-card-inner">
-            <div class="performer-image-wrapper">
-              <img src="assets/images/home-result/10.jpg" alt="Adnan Raza" class="performer-image">
-            </div>
-            <div class="performer-details">
-              <h3 class="performer-name">ADNAN RAZA</h3>
-              <div class="performer-score">
-                <span class="score-label">Percentile</span>
-                <span class="score-value">99.67</span>
-              </div>
-              <div class="performer-exam">JEE Main 2026</div>
-              <div class="performer-rollno">Roll No. UP120302791</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Performer Card 2 -->
-        <div class="performer-grid-card">
-          <div class="performer-card-inner">
-            <div class="performer-image-wrapper">
-              <img src="assets/images/home-result/13.jpg" alt="Ravindra Kumar" class="performer-image">
-            </div>
-            <div class="performer-details">
-              <h3 class="performer-name">RAVINDRA KUMAR</h3>
-              <div class="performer-score">
-                <span class="score-label">Percentile</span>
-                <span class="score-value">99.40</span>
-              </div>
-              <div class="performer-exam">JEE Main 2026</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Performer Card 3 -->
-        <div class="performer-grid-card">
-          <div class="performer-card-inner">
-            <div class="performer-image-wrapper">
-              <img src="assets/images/home-result/12.jpg" alt="Atharva Upadhyay" class="performer-image">
-            </div>
-            <div class="performer-details">
-              <h3 class="performer-name">ATHARVA UPADHYAY</h3>
-              <div class="performer-score">
-                <span class="score-label">Percentile</span>
-                <span class="score-value">99.65</span>
-              </div>
-              <div class="performer-exam">JEE Main 2026</div>
-              <div class="performer-rollno">Roll No. UP120600868</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Performer Card 4 -->
-        <div class="performer-grid-card">
-          <div class="performer-card-inner">
-            <div class="performer-image-wrapper">
-              <img src="assets/images/home-result/14.jpg" alt="Mohd Ali Umar" class="performer-image">
-            </div>
-            <div class="performer-details">
-              <h3 class="performer-name">MOHD ALI UMAR</h3>
-              <div class="performer-score">
-                <span class="score-label">Percentile</span>
-                <span class="score-value">99.11</span>
-              </div>
-              <div class="performer-exam">JEE Main 2026</div>
-              <div class="performer-rollno">Roll No. UP120301776</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="performer-highlight-card-wrapper">
-        <p class="performer-highlight-heading">Special Highlight</p>
-        <div class="performer-grid-card highlight-card special-card">
-          <div class="performer-card-inner">
-            <div class="performer-image-wrapper">
-              <img src="assets/images/home-result/11.jpg" alt="Ojas Singhal" class="performer-image">
-              <div class="performer-badge">Top Rank</div>
-            </div>
-            <div class="performer-details">
-              <h3 class="performer-name">OJAS SINGHAL</h3>
-              <div class="performer-score">
-                <span class="score-label">Percentile</span>
-                <span class="score-value">99.973</span>
-              </div>
-              <div class="performer-exam">JEE Main 2026</div>
-              <div class="performer-rollno">Roll No. UP120600040</div>
-              <div class="performer-rank-label">2nd District Topper</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Featured Large Card for Multi-Olympiad Achiever -->
+  <!-- Featured Large Card for Multi-Olympiad Achiever -->
       <div class="featured-performer-card">
         <div class="featured-card-inner">
           <div class="featured-image-section">
@@ -573,12 +558,123 @@
         </div>
       </div>
 
-      <!-- View All Results Button -->
-      <div class="text-center mt-5">
-        <a href="result.html" class="btn-view-results">
-          View All Results <i class="fas fa-arrow-right ms-2"></i>
-        </a>
+
+
+  <!-- ===================================================== -->
+  <!-- 🏆 DISTRICT TOPPER SECTION - GRAVITY CLASSES -->
+  <!-- ===================================================== -->
+  <section class="best-performers-grid-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">District Toppers</h2>
+        <p class="section-subtitle">Celebrating our top district achievers and their outstanding results</p>
       </div>
+
+       <div class="performer-highlight-card-wrapper">
+        <p class="performer-highlight-heading">Special Highlight</p>
+        <div class="performer-grid-card highlight-card special-card">
+          <div class="performer-card-inner">
+            <div class="performer-image-wrapper">
+              <img src="assets/images/home-result/11.jpg" alt="Ojas Singhal" class="performer-image">
+              <div class="performer-badge">Top Rank</div>
+            </div>
+            <div class="performer-details">
+              <h3 class="performer-name">OJAS SINGHAL</h3>
+              <div class="performer-score">
+                <span class="score-label">Percentile</span>
+                <span class="score-value">99.973</span>
+                
+              </div>
+              <div class="performer-exam">JEE Main 2026</div>
+              <div class="performer-rollno">Roll No. UP120600040</div>
+              <div class="performer-rank-label">2nd District Topper</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="performers-grid">
+        <!-- Performer Card 1 -->
+        <div class="performer-grid-card">
+          <div class="performer-card-inner">
+            <div class="performer-image-wrapper">
+              <img src="assets/images/home-result/10.jpg" alt="Adnan Raza" class="performer-image">
+            </div>
+            <div class="performer-details">
+              <h3 class="performer-name">ADNAN RAZA</h3>
+              <div class="performer-score">
+                <span class="score-label">Percentile</span>
+                <span class="score-value">99.67</span>
+              </div>
+              <div class="performer-exam">JEE Main 2026</div>
+              <div class="performer-rollno">Roll No. UP120302791</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performer Card 2 -->
+
+          <div class="performer-grid-card">
+          <div class="performer-card-inner">
+            <div class="performer-image-wrapper">
+              <img src="assets/images/home-result/12.jpg" alt="Atharva Upadhyay" class="performer-image">
+            </div>
+            <div class="performer-details">
+              <h3 class="performer-name">ATHARVA UPADHYAY</h3>
+              <div class="performer-score">
+                <span class="score-label">Percentile</span>
+                <span class="score-value">99.65</span>
+              </div>
+              <div class="performer-exam">JEE Main 2026</div>
+              <div class="performer-rollno">Roll No. UP120600868</div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <!-- Performer Card 3 -->
+      
+        <div class="performer-grid-card">
+          <div class="performer-card-inner">
+            <div class="performer-image-wrapper">
+              <img src="assets/images/home-result/13.jpg" alt="Ravindra Kumar" class="performer-image">
+            </div>
+            <div class="performer-details">
+              <h3 class="performer-name">RAVINDRA KUMAR</h3>
+              <div class="performer-score">
+                <span class="score-label">Percentile</span>
+                <span class="score-value">99.40</span>
+              </div>
+              <div class="performer-exam">JEE Main 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performer Card 4 -->
+        <div class="performer-grid-card">
+          <div class="performer-card-inner">
+            <div class="performer-image-wrapper">
+              <img src="assets/images/home-result/14.jpg" alt="Mohd Ali Umar" class="performer-image">
+            </div>
+            <div class="performer-details">
+              <h3 class="performer-name">MOHD ALI UMAR</h3>
+              <div class="performer-score">
+                <span class="score-label">Percentile</span>
+                <span class="score-value">99.11</span>
+              </div>
+              <div class="performer-exam">JEE Main 2026</div>
+              <div class="performer-rollno">Roll No. UP120301776</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+    
+      <!-- View All Results Button -->
+
     </div>
   </section>
 
@@ -709,7 +805,7 @@
 
     <section class="courses" id="courses">
       <div class="container py-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="row row-cols-2 row-cols-lg-4 g-4">
           <div class="col service">
             <div class="service-item rounded pt-3 medical h-100">
               <div class="p-4">
@@ -896,7 +992,7 @@
               <i class="fab fa-whatsapp icon"></i>
               <div>
                 <h2>𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗨𝘀</h2>
-                <p><a href="https://wa.me/+918573986324" target="_blank">+(91) 8573986324</a></p>
+                <p><a href="https://wa.me/+918573986324" target="_blank" rel="noopener noreferrer">+(91) 8573986324</a></p>
               </div>
             </div>
           </div>
@@ -964,7 +1060,7 @@
         <div class="container">
           <div class="row text-center fea-container">
             <!-- Feature 1: Expert Faculty -->
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-6 col-lg-3 col-md-6 mb-4">
               <div class="feature-box">
                 <h3>Expert Faculty</h3>
                 <p>
@@ -975,7 +1071,7 @@
             </div>
 
             <!-- Feature 2: Proven Success -->
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-6 col-lg-3 col-md-6 mb-4">
               <div class="feature-box">
                 <h3>Proven Success</h3>
                 <p>
@@ -987,7 +1083,7 @@
             </div>
 
             <!-- Feature 3: Personalized Mentorship -->
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-6 col-lg-3 col-md-6 mb-4">
               <div class="feature-box">
                 <h3>Personal Mentorship</h3>
                 <p>
@@ -999,7 +1095,7 @@
             </div>
 
             <!-- Feature 4: Comprehensive Programs -->
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-6 col-lg-3 col-md-6 mb-4">
               <div class="feature-box">
                 <h3>Full Programs</h3>
                 <p>
@@ -1228,3 +1324,4 @@
 </body>
 
 </html>
+
