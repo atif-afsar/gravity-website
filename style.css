@@ -4380,22 +4380,25 @@ body {
   width: 100%;
   height: 320px;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding: 30px 10px 0 10px;
 }
 
 .performer-image {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  max-width: 90%;
+  max-height: 100%;
   object-fit: contain;
-  object-position: center;
+  object-position: bottom center;
   transition: transform 0.4s ease;
+  transform: translateY(2px);
 }
 
 .performer-grid-card:hover .performer-image {
-  transform: scale(1.08);
+  transform: scale(1.08) translateY(2px);
 }
 
 /* Badge */
@@ -4573,13 +4576,17 @@ body {
 
   .performer-image-wrapper {
     height: auto;
-    padding: 20px 0 10px;
+    padding: 20px 5px 0 5px;
+    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%);
   }
 
   .performer-image {
     width: auto;
-    max-width: 90%;
+    max-width: 92%;
     max-height: 250px;
+    display: block;
+    margin: 0 auto;
+    transform: scale(1.05) translateY(2px);
   }
 
   .performer-grid-card {
@@ -4734,8 +4741,9 @@ body {
 
 .featured-card-inner {
   display: grid;
-  grid-template-columns: minmax(320px, 420px) 1fr;
+  grid-template-columns: minmax(280px, 420px) 1fr;
   gap: 0;
+  align-items: center;
 }
 
 /* Featured Image Section */
@@ -4744,16 +4752,16 @@ body {
   background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 40px;
   min-height: 460px;
 }
 
 .featured-performer-image {
   width: 100%;
-  max-width: 100%;
+  max-width: 420px;
   height: auto;
-  max-height: 100%;
+  max-height: 480px;
   object-fit: contain;
   object-position: center;
   border-radius: 12px;
@@ -4784,8 +4792,11 @@ body {
 
 /* Featured Details Section */
 .featured-details-section {
-  padding: 40px;
+  padding: 40px 45px 40px 40px;
   background: linear-gradient(135deg, #ffffff, #f0fdf4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .featured-performer-title {
@@ -4807,7 +4818,7 @@ body {
 /* Featured Achievements Grid */
 .featured-achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
@@ -4897,20 +4908,28 @@ body {
 /* Responsive Design for Featured Card */
 @media (max-width: 991px) {
   .featured-card-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(180px, 40%) 1fr;
+    gap: 20px;
+    align-items: start;
   }
 
   .featured-image-section {
-    padding: 30px;
+    padding: 28px 24px;
     min-height: 300px;
+    justify-content: flex-start;
+  }
+
+  .featured-performer-image {
+    max-width: 100%;
+    max-height: 420px;
   }
 
   .featured-details-section {
-    padding: 30px;
+    padding: 30px 24px 30px 20px;
   }
 
   .featured-performer-title {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
   }
 
   .featured-achievements-grid {
@@ -4927,39 +4946,74 @@ body {
 }
 
 @media (max-width: 768px) {
+  .featured-card-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .featured-performer-card {
-    margin-top: 30px;
+    margin-top: 40px;
+    border-radius: 24px;
+    border: none;
+    box-shadow: 0 15px 40px rgba(57, 161, 100, 0.12);
   }
 
   .featured-image-section {
-    padding: 25px;
-    min-height: 250px;
+    padding: 40px 20px 0 20px; /* Removed bottom padding completely */
+    min-height: auto;
+    justify-content: center;
+    border-radius: 0; /* Rely on container overflow */
+    background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 100%); /* Fades perfectly into the info section below */
+  }
+
+  .featured-performer-image {
+    max-height: 320px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    /* scale makes it pop, translating down slightly ensures it merges seamlessly with no subpixel gaps */
+    transform: scale(1.02) translateY(2px); 
+  }
+
+  .featured-badge {
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 8px 25px rgba(57, 161, 100, 0.3);
   }
 
   .featured-details-section {
-    padding: 25px;
+    padding: 35px 25px 30px 25px;
+    margin-top: 0; /* Removed overlap */
+    border-radius: 0; /* Seamless flat connection with image */
+    position: relative;
+    z-index: 2;
+    background: white;
+    /* Removed the shadow edge so they merge as ONE full card seamlessly */
   }
 
   .featured-performer-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    text-align: center;
   }
 
   .featured-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 25px;
   }
 
   .featured-achievement-item {
-    padding: 15px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #f0fdf4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    align-items: center;
+    gap: 15px;
   }
 
-  .achievement-icon {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-  }
-
-  .achievement-icon i {
-    font-size: 1.1rem;
+  .highlight-featured {
+    box-shadow: 0 8px 25px rgba(57, 161, 100, 0.15);
   }
 
   .performers-grid {
@@ -4968,23 +5022,83 @@ body {
 }
 
 @media (max-width: 576px) {
-  .featured-performer-card {
-    border-radius: 16px;
-    border-width: 2px;
-  }
-
-  .featured-image-section {
-    padding: 20px;
-    min-height: 280px;
+  .featured-performer-image {
+    max-height: 280px;
   }
 
   .featured-badge {
+    top: 15px;
+    left: 15px;
     font-size: 0.75rem;
     padding: 8px 15px;
   }
+  
+  .featured-badge span {
+    display: inline; /* Keep text visible since we have full width */
+  }
 
   .featured-details-section {
-    padding: 20px;
+    padding: 30px 20px 25px 20px;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  .featured-performer-title {
+    font-size: 1.5rem;
+  }
+
+  .featured-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .featured-achievements-grid {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-achievement-item {
+    padding: 14px;
+  }
+  
+  .achievement-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 10px;
+  }
+
+  .achievement-icon i {
+    font-size: 1rem;
+  }
+
+  .performers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-performer-card {
+    border-radius: 20px;
+  }
+
+  .featured-image-section {
+    padding: 30px 15px 0 15px; /* Removed bottom padding */
+  }
+
+  .featured-performer-image {
+    max-height: 240px;
+  }
+
+  .featured-badge {
+    top: 12px;
+    left: 12px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .featured-details-section {
+    padding: 25px 15px 20px 15px;
   }
 
   .featured-performer-title {
@@ -4993,33 +5107,236 @@ body {
 
   .featured-subtitle {
     font-size: 0.85rem;
-    margin-bottom: 20px;
   }
-
-  .featured-achievement-item {
-    padding: 12px;
-    gap: 12px;
-  }
-
-  .achievement-icon {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-  }
-
-  .achievement-icon i {
-    font-size: 1rem;
-  }
-
+  
   .achievement-content h4 {
     font-size: 0.9rem;
   }
+}
 
-  .achievement-content p {
-    font-size: 0.8rem;
+/* ===================================================== */
+/* EXPERT FACULTY SECTION - PREMIUM DESIGN               */
+/* ===================================================== */
+
+.expert-faculty-sec {
+  background: #ffffff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decorative blur shapes */
+.expert-faculty-sec::before,
+.expert-faculty-sec::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+.expert-faculty-sec::before {
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(16, 185, 129, 0.15); /* Emerald Green blur */
+}
+.expert-faculty-sec::after {
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: rgba(74, 222, 128, 0.1); /* Light green blur */
+}
+
+.expert-faculty-sec .faculty-container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 30px;
+  padding: 60px 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.meet-our-expert {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.meet-our-expert .faculty-cursive {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: capitalize;
+  font-size: 64px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -10px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.team-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); /* Greenish shadow */
+}
+
+.team-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.team-card:hover::after {
+  box-shadow: inset 0 0 0 2px #10b981; /* Green border glow */
+}
+
+.team-img-wrap {
+  width: 100%;
+  height: 250px; /* Fixed height so all cards are identical in size */
+  overflow: hidden;
+  position: relative;
+  background: #f1f5f9;
+}
+
+.team-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-card:hover .team-img-wrap img {
+  transform: scale(1.08); /* Classy image zoom */
+}
+
+/* Elegant gradient overlay */
+.team-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(6, 78, 59, 0.8) 0%, transparent 100%); /* Dark green gradient */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.team-card:hover .team-img-wrap::after {
+  opacity: 1;
+}
+
+.team-info-box {
+  padding: 24px 20px 10px 20px;
+  background: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: background 0.4s ease;
+  flex-grow: 1; /* Stretch properly */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 120px; /* Ensure rigid identical heights for text content */
+}
+
+.team-card:hover .team-info-box {
+  background: #f0fdf4;
+}
+
+.team-info-box h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #064e3b;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.team-card:hover .team-info-box h4 {
+  color: #10b981; /* Highlights name */
+}
+
+.team-info-box p {
+  font-size: 13px;
+  font-weight: 700;
+  color: #059669;
+  margin: auto auto 10px auto;
+  display: inline-block;
+  padding: 6px 16px;
+  background: #ecfdf5;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .team-info-box p {
+  background: #d1fae5;
+  color: #047857;
+}
+
+@media (max-width: 768px) {
+  .meet-our-expert {
+    font-size: 28px;
   }
-
-  .performers-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .meet-our-expert .faculty-cursive {
+    font-size: 34px;
+    margin-top: -6px;
+  }
+  .expert-faculty-sec .faculty-container {
+    padding: 30px 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95); /* More opaque */
+  }
+  
+  .team-img-wrap {
+    height: 180px; /* Mobile identical sizing fixed */
+  }
+  
+  .team-info-box {
+    padding: 12px 6px;
+    min-height: 90px;
+  }
+  .team-info-box h4 {
+    font-size: 13.5px;
+    margin: 0 0 6px 0;
+    letter-spacing: 0;
+  }
+  .team-info-box p {
+    font-size: 11px;
+    padding: 4px 10px;
+    margin: auto auto 4px auto;
   }
 }
